@@ -7,7 +7,12 @@
     "allowImportingTsExtensions": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strict": true
+    "strict": true,
+
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/styled-system/*": ["./styled-system/*"]
+    }
   },
   "exclude": [
     "node_modules",
