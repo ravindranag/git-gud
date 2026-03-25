@@ -1,5 +1,5 @@
 {
-  "name": "git-gub-mr",
+  "name": "git-gud",
   "private": true,
   "scripts": {
     "build": "turbo run build",
