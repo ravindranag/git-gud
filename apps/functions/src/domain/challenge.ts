@@ -39,7 +39,6 @@ const challengeConverter: FirestoreDataConverter<Challenge> = {
 const challengesCollection = firestore.collection("Challenges").withConverter(challengeConverter)
 
 export const ChallengeService = {
-  /** Create a new user */
   async createChallenge(data: CreateChallengeData): Promise<string> {
     const docRef = await challengesCollection.add(data as Challenge)
     return docRef.id;
