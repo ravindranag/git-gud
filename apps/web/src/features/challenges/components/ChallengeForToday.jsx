@@ -11,11 +11,15 @@ const ChallengeForToday = () => {
 
   return (
     <div className={vstack({gap: 0, alignItems: 'start', bg: 'stone.200'})}>
-      <Card variant="outlined" borderTopLeftRadius={0} borderTopRightRadius={0} borderBottom="none" className={hstack()}>
+      <Card variant="outlined" borderBottom="none" borderTop="none" className={hstack()}>
         <h1 className={css({alignSelf: 'center', flexGrow: 1})}>Today's frontend challenge</h1>
         <p className={css({fontSize: 'sm', color: 'neutral.500'})}>{localToday}</p>
       </Card>
-      {isLoading && (<p>Loading...</p>)}
+      {isLoading && (
+        <Card variant="outlined">
+          <p>Loading...</p>
+        </Card>
+      )}
       {challenge && <RenderChallenge challenge={challenge} />}
     </div>
   )

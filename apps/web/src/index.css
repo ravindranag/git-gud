@@ -6,8 +6,11 @@ body {
 
 #root {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden auto;
   background: var(--colors-stone-50);
+  display: flex;
+  flex-direction: column;
+
 }
 

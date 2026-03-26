@@ -7,7 +7,7 @@ export const Route = createFileRoute('/')({
 })
 
 function RouteComponent() {
-  return <div className={container({maxWidth: '2xl', paddingInline: 0 })}>
+  return <div className={container({maxWidth: '2xl', paddingInline: 0})}>
     <ChallengeForToday />
   </div>
 }

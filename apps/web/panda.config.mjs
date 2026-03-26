@@ -18,6 +18,33 @@ export default defineConfig({
           subTitle: {
             value: '0.2rem'
           }
+        },
+        zIndex: {
+          mobileStepper: {
+            value: 1000
+          },
+          fab: {
+            value: 1050
+          },
+          speedDial: {
+            value: 1050
+          },
+          appBar: {
+            value: 1100
+          },
+          drawer: {
+            value: 1200
+          },
+          modal: {
+            value: 1300
+          },
+          snackbar: {
+            value: 1400
+          },
+          tooltip: {
+            value: 1500
+          },
+
         }
       }
     },
