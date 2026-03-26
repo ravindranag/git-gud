@@ -29,6 +29,9 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "predeploy": [
+      "bun run --cwd \"$RESOURCE_DIR\" build"
     ]
   }
 }
