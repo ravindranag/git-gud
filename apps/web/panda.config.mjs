@@ -12,21 +12,36 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        letterSpacings: {
+          subTitle: {
+            value: '0.2rem'
+          }
+        }
+      }
+    },
   },
 
   // The output directory for your css system
   outdir: "styled-system",
+  jsxFramework: 'react',
 
   globalFontface: {
-    GoogleSans: {
-      src: 'url(/fonts/GoogleSans-Variable.ttf)',
+    CabinetGrotesk: {
+      src: 'url(/fonts/CabinetGrotesk-Variable.woff2) format(woff2)',
       fontStyle: 'normal',
       fontDisplay: 'swap'
     }
   },
 
   globalVars: {
-    '--font-google-sans': 'GoogleSans'
+    '--font-cabinet-grotesk': 'CabinetGrotesk'
+  },
+
+  globalCss: {
+    'p,h1,h2,h3,h4,h5,h6': {
+      color: 'neutral.900'
+    }
   }
 });

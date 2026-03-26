@@ -5,7 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'src/routeTree.gen.js']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -24,6 +24,15 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'react-refresh/only-export-components': ['warn', {allowExportNames: ['Route']}]
+    },
+  },
+  {
+    // TanStack Router route files always export a non-component `Route` constant
+    // alongside a component — suppress the fast-refresh warning for them.
+    files: ['src/routes/**/*.{js,jsx}'],
+    rules: {
+      'react-refresh/only-export-components': 'off',
     },
   },
 ])
